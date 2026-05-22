@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkShield - Invisible Watermark Protection</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, 'Inter', system-ui, sans-serif;
+            background: #0a0a0b;
+            color: #f5f5f7;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+
+        .hero { text-align: center; padding: 60px 0 40px; }
+        .hero h1 {
+            font-size: 3rem; font-weight: 700;
+            background: linear-gradient(135deg, #f5f5f7 0%, #a5a5b0 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+        .hero p { font-size: 1.2rem; color: #8e8e93; max-width: 600px; margin: 0 auto; }
+
+        .section { margin: 48px 0; }
+        .section h2 { font-size: 1.5rem; margin-bottom: 20px; text-align: center; }
+
+        .problem-box {
+            background: #1c1c1e; border-radius: 16px; padding: 32px;
+            border: 1px solid #2c2c2e; margin: 32px 0;
+        }
+        .problem-box .quote {
+            font-style: italic; color: #ff453a; font-size: 1.1rem;
+            padding: 16px 0; border-bottom: 1px solid #2c2c2e;
+        }
+        .problem-box .quote:last-child { border-bottom: none; }
+        .problem-box .source { color: #636366; font-size: 0.85rem; font-style: normal; }
+
+        .how-it-works {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+        }
+        .step {
+            background: #1c1c1e; border-radius: 12px; padding: 24px;
+            border: 1px solid #2c2c2e; text-align: center;
+        }
+        .step .num {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: #30d158; color: #000;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; margin: 0 auto 12px;
+        }
+        .step h3 { font-size: 1rem; margin-bottom: 8px; }
+        .step p { font-size: 0.85rem; color: #8e8e93; }
+
+        .features {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .feature-card {
+            background: #1c1c1e; border-radius: 12px; padding: 24px;
+            border: 1px solid #2c2c2e;
+        }
+        .feature-card .emoji { font-size: 1.5rem; margin-bottom: 8px; }
+        .feature-card h3 { font-size: 1rem; margin-bottom: 4px; }
+        .feature-card p { font-size: 0.85rem; color: #8e8e93; }
+
+        .cta {
+            text-align: center; padding: 48px 0;
+        }
+        .cta h2 { font-size: 1.8rem; margin-bottom: 12px; }
+        .cta p { color: #8e8e93; margin-bottom: 28px; }
+        .cta .button {
+            display: inline-block;
+            background: #30d158; color: #000;
+            padding: 16px 40px; border-radius: 40px;
+            font-size: 1.1rem; font-weight: 600;
+            text-decoration: none;
+        }
+        .cta .button:hover { transform: scale(1.05); }
+
+        .pain-points { list-style: none; margin: 24px 0; }
+        .pain-points li {
+            padding: 12px 0; border-bottom: 1px solid #2c2c2e;
+            display: flex; gap: 12px;
+        }
+        .pain-points li:last-child { border-bottom: none; }
+        .pain-points .icon { font-size: 1.2rem; flex-shrink: 0; }
+        .pain-points .text { color: #a5a5b0; }
+
+        .footer { text-align: center; padding: 32px 0; color: #636366; font-size: 0.85rem; }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .how-it-works { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Your photos shouldn't<br>cost you your business.</h1>
+            <p>Invisible watermark protection for product images. Embed a digital fingerprint only you can verify.</p>
+        </div>
+
+        <div class="section">
+            <h2>Real sellers, real pain</h2>
+            <div class="problem-box">
+                <div class="quote">
+                    "Hundreds of my photos were all over the Internet on different sites.
+                    I paid for professional photography and someone just took them."
+                    <div class="source">— r/EtsySellers, 111 upvotes</div>
+                </div>
+                <div class="quote">
+                    "Please HELP!! Stolen product photos and content. Multiple competitors
+                    are stealing my work. Seeing it reposted on Temu for $40 is infuriating."
+                    <div class="source">— r/shopify, 104 comments</div>
+                </div>
+                <div class="quote">
+                    "Sucks to pay for professional photography and have it be ripped off."
+                    <div class="source">— r/shopify seller</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What sellers are doing now</h2>
+            <ul class="pain-points">
+                <li>
+                    <span class="icon">⚠️</span>
+                    <span class="text"><strong>DMCA takedowns</strong> — reactive, slow, each one takes hours. After you've already lost sales.</span>
+                </li>
+                <li>
+                    <span class="icon">👎</span>
+                    <span class="text"><strong>Visible watermarks</strong> — ruin your product photos, make them look cheap, reduce conversion.</span>
+                </li>
+                <li>
+                    <span class="icon">💸</span>
+                    <span class="text"><strong>$5/mo apps</strong> (StoreLock) — help a bit but still can't prove original ownership in court.</span>
+                </li>
+                <li>
+                    <span class="icon">🤷</span>
+                    <span class="text"><strong>Do nothing</strong> — most sellers just accept that their photos will be stolen. They shouldn't have to.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How it works</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="num">1</div>
+                    <h3>Upload photo</h3>
+                    <p>Upload your product image. The watermark is invisible — no visible marks or logos.</p>
+                </div>
+                <div class="step">
+                    <div class="num">2</div>
+                    <h3>Embed fingerprint</h3>
+                    <p>We embed a unique digital watermark into the image data. Undetectable to the eye.</p>
+                </div>
+                <div class="step">
+                    <div class="num">3</div>
+                    <h3>Verify ownership</h3>
+                    <p>If your photo is stolen, upload the stolen copy to verify it's yours. Proof in seconds.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="emoji">🕵️</div>
+                    <h3>Invisible by design</h3>
+                    <p>Doesn't affect image quality. No logos, no text, no visible marks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">🔐</div>
+                    <h3>Tamper-proof</h3>
+                    <p>Watermark survives compression, cropping, resizing, and format conversion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">⚡</div>
+                    <h3>Batch protect</h3>
+                    <p>Watermark your entire product catalog in one click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">⚖️</div>
+                    <h3>Legal-grade proof</h3>
+                    <p>Generate timestamped proof of ownership suitable for DMCA and legal disputes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Try it free</h2>
+            <p>Upload one product photo and get an invisible watermark — no charge.</p>
+            <a href="https://forms.gle/YOUR_FORM_ID" class="button" target="_blank">Protect Your Photo →</a>
+        </div>
+
+        <div class="footer">
+            Built for sellers who've had enough of photo theft. Feedback? hello@markshield.dev
+        </div>
+    </div>
+</body>
+</html>
