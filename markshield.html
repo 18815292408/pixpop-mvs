@@ -37,47 +37,6 @@
         .problem-box .quote:last-child { border-bottom: none; }
         .problem-box .source { color: #636366; font-size: 0.85rem; font-style: normal; }
 
-        .how-it-works {
-            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
-        }
-        .step {
-            background: #1c1c1e; border-radius: 12px; padding: 24px;
-            border: 1px solid #2c2c2e; text-align: center;
-        }
-        .step .num {
-            width: 36px; height: 36px; border-radius: 50%;
-            background: #30d158; color: #000;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 1rem; margin: 0 auto 12px;
-        }
-        .step h3 { font-size: 1rem; margin-bottom: 8px; }
-        .step p { font-size: 0.85rem; color: #8e8e93; }
-
-        .features {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-        }
-        .feature-card {
-            background: #1c1c1e; border-radius: 12px; padding: 24px;
-            border: 1px solid #2c2c2e;
-        }
-        .feature-card .emoji { font-size: 1.5rem; margin-bottom: 8px; }
-        .feature-card h3 { font-size: 1rem; margin-bottom: 4px; }
-        .feature-card p { font-size: 0.85rem; color: #8e8e93; }
-
-        .cta {
-            text-align: center; padding: 48px 0;
-        }
-        .cta h2 { font-size: 1.8rem; margin-bottom: 12px; }
-        .cta p { color: #8e8e93; margin-bottom: 28px; }
-        .cta .button {
-            display: inline-block;
-            background: #30d158; color: #000;
-            padding: 16px 40px; border-radius: 40px;
-            font-size: 1.1rem; font-weight: 600;
-            text-decoration: none;
-        }
-        .cta .button:hover { transform: scale(1.05); }
-
         .pain-points { list-style: none; margin: 24px 0; }
         .pain-points li {
             padding: 12px 0; border-bottom: 1px solid #2c2c2e;
@@ -87,12 +46,140 @@
         .pain-points .icon { font-size: 1.2rem; flex-shrink: 0; }
         .pain-points .text { color: #a5a5b0; }
 
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .feature-card {
+            background: #1c1c1e; border-radius: 12px; padding: 24px;
+            border: 1px solid #2c2c2e;
+        }
+        .feature-card .emoji { font-size: 1.5rem; margin-bottom: 8px; }
+        .feature-card h3 { font-size: 1rem; margin-bottom: 4px; }
+        .feature-card p { font-size: 0.85rem; color: #8e8e93; }
+
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        .pricing-card {
+            background: #1c1c1e; border-radius: 16px; padding: 32px 24px;
+            border: 1px solid #2c2c2e; text-align: center;
+            position: relative; transition: border-color 0.2s;
+        }
+        .pricing-card:hover { border-color: #ff9f0a; }
+        .pricing-card.popular {
+            border-color: #ff9f0a;
+            background: linear-gradient(180deg, #2e261a 0%, #1c1c1e 100%);
+        }
+        .pricing-card.popular .badge {
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: #ff9f0a; color: #000; padding: 4px 16px;
+            border-radius: 20px; font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .pricing-card .price { font-size: 2.5rem; font-weight: 700; margin: 16px 0 8px; }
+        .pricing-card .price span { font-size: 1rem; color: #8e8e93; font-weight: 400; }
+        .pricing-card .desc { color: #8e8e93; font-size: 0.9rem; margin-bottom: 20px; }
+        .pricing-card .buy-btn {
+            display: inline-block;
+            background: #ff9f0a; color: #000;
+            padding: 12px 32px; border-radius: 40px;
+            font-size: 1rem; font-weight: 600;
+            cursor: pointer; transition: transform 0.2s; border: none;
+        }
+        .pricing-card .buy-btn:hover { transform: scale(1.05); }
+
+        /* Steps */
+        .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 48px 0; }
+        .step-card {
+            background: #1c1c1e; border-radius: 12px; padding: 24px;
+            border: 1px solid #2c2c2e; text-align: center;
+        }
+        .step-card .num {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: #ff9f0a; color: #000;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; margin: 0 auto 12px;
+        }
+        .step-card h3 { font-size: 1rem; margin-bottom: 8px; }
+        .step-card p { font-size: 0.85rem; color: #8e8e93; }
+
+        /* Upload Form */
+        .upload-section {
+            background: #1c1c1e; border-radius: 16px; padding: 32px;
+            margin: 48px 0; border: 1px solid #2c2c2e;
+            display: none;
+        }
+        .upload-section.visible { display: block; }
+        .upload-section h2 { text-align: center; margin-bottom: 8px; }
+        .upload-section .subtitle { text-align: center; color: #8e8e93; margin-bottom: 24px; }
+        .upload-form { max-width: 480px; margin: 0 auto; }
+        .upload-form label {
+            display: block; font-size: 0.9rem; font-weight: 600;
+            margin-bottom: 6px; color: #a5a5b0;
+        }
+        .upload-form input[type="email"],
+        .upload-form input[type="file"] {
+            width: 100%; padding: 12px 16px;
+            background: #2c2c2e; border: 1px solid #3a3a3c;
+            border-radius: 10px; color: #f5f5f7; font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .upload-form input[type="file"] { padding: 10px 16px; }
+        .upload-form input:focus { outline: none; border-color: #ff9f0a; }
+        .upload-form .submit-btn {
+            width: 100%; padding: 14px;
+            background: #ff9f0a; color: #000;
+            border: none; border-radius: 40px;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer;
+        }
+        .upload-form .submit-btn:hover { background: #e09000; }
+        .upload-form .note {
+            text-align: center; color: #636366; font-size: 0.8rem;
+            margin-top: 12px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            align-items: center; justify-content: center;
+            z-index: 1000;
+        }
+        .modal-overlay.visible { display: flex; }
+        .modal {
+            background: #1c1c1e; border-radius: 20px; padding: 40px 32px;
+            border: 1px solid #3a3a3c; max-width: 400px; width: 90%;
+            text-align: center;
+        }
+        .modal .lock-icon { font-size: 3rem; margin-bottom: 16px; }
+        .modal h3 { font-size: 1.4rem; margin-bottom: 8px; }
+        .modal .amount {
+            font-size: 2.5rem; font-weight: 700; color: #30d158; margin: 16px 0;
+        }
+        .modal .plan-name { color: #8e8e93; font-size: 0.95rem; margin-bottom: 24px; }
+        .modal .btn-group { display: flex; gap: 12px; }
+        .modal .btn-confirm {
+            flex: 1; padding: 14px; border-radius: 40px;
+            background: #ff9f0a; color: #000;
+            font-size: 1rem; font-weight: 600; border: none; cursor: pointer;
+        }
+        .modal .btn-confirm:hover { background: #e09000; }
+        .modal .btn-cancel {
+            flex: 1; padding: 14px; border-radius: 40px;
+            background: #2c2c2e; color: #8e8e93;
+            font-size: 1rem; font-weight: 600; border: none; cursor: pointer;
+        }
+        .modal .btn-cancel:hover { background: #3a3a3c; }
+        .modal .note { color: #636366; font-size: 0.75rem; margin-top: 12px; }
+
+        .scroll-hint { text-align: center; color: #636366; font-size: 0.9rem; margin: 32px 0; }
+
         .footer { text-align: center; padding: 32px 0; color: #636366; font-size: 0.85rem; }
 
         @media (max-width: 640px) {
             .hero h1 { font-size: 2rem; }
-            .how-it-works { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; }
             .features { grid-template-columns: 1fr; }
+            .modal .btn-group { flex-direction: column; }
         }
     </style>
 </head>
@@ -100,20 +187,19 @@
     <div class="container">
         <div class="hero">
             <h1>Your photos shouldn't<br>cost you your business.</h1>
-            <p>Invisible watermark protection for product images. Embed a digital fingerprint only you can verify.</p>
+            <p>Invisible watermark protection for your product images. Embed a digital fingerprint only you can verify. Processed within 24 hours.</p>
         </div>
 
+        <!-- Real seller pain -->
         <div class="section">
             <h2>Real sellers, real pain</h2>
             <div class="problem-box">
                 <div class="quote">
-                    "Hundreds of my photos were all over the Internet on different sites.
-                    I paid for professional photography and someone just took them."
+                    "Hundreds of my photos were all over the Internet on different sites. I paid for professional photography and someone just took them."
                     <div class="source">— r/EtsySellers, 111 upvotes</div>
                 </div>
                 <div class="quote">
-                    "Please HELP!! Stolen product photos and content. Multiple competitors
-                    are stealing my work. Seeing it reposted on Temu for $40 is infuriating."
+                    "Please HELP!! Stolen product photos and content. Multiple competitors are stealing my work. Seeing it reposted on Temu for $40 is infuriating."
                     <div class="source">— r/shopify, 104 comments</div>
                 </div>
                 <div class="quote">
@@ -123,84 +209,142 @@
             </div>
         </div>
 
+        <!-- What sellers do now -->
         <div class="section">
-            <h2>What sellers are doing now</h2>
+            <h2>What sellers do today (and why it doesn't work)</h2>
             <ul class="pain-points">
-                <li>
-                    <span class="icon">⚠️</span>
-                    <span class="text"><strong>DMCA takedowns</strong> — reactive, slow, each one takes hours. After you've already lost sales.</span>
-                </li>
-                <li>
-                    <span class="icon">👎</span>
-                    <span class="text"><strong>Visible watermarks</strong> — ruin your product photos, make them look cheap, reduce conversion.</span>
-                </li>
-                <li>
-                    <span class="icon">💸</span>
-                    <span class="text"><strong>$5/mo apps</strong> (StoreLock) — help a bit but still can't prove original ownership in court.</span>
-                </li>
-                <li>
-                    <span class="icon">🤷</span>
-                    <span class="text"><strong>Do nothing</strong> — most sellers just accept that their photos will be stolen. They shouldn't have to.</span>
-                </li>
+                <li><span class="icon">⚠️</span><span class="text"><strong>DMCA takedowns</strong> — reactive, slow, each takes hours. By the time it's done, sales are already lost.</span></li>
+                <li><span class="icon">👎</span><span class="text"><strong>Visible watermarks</strong> — ruin your product photos, make them look cheap, reduce conversion.</span></li>
+                <li><span class="icon">💸</span><span class="text"><strong>$5–$30/mo apps</strong> — help a bit but still can't prove original ownership.</span></li>
+                <li><span class="icon">🤷</span><span class="text"><strong>Do nothing</strong> — most sellers just accept photo theft. They shouldn't have to.</span></li>
             </ul>
         </div>
 
+        <!-- How it works -->
+        <div style="margin: 48px 0;">
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:24px;">How it works</h2>
+            <div class="steps">
+                <div class="step-card"><div class="num">1</div><h3>Choose a plan</h3><p>Pick a package based on how many photos you need to protect. One-time payment.</p></div>
+                <div class="step-card"><div class="num">2</div><h3>Confirm & upload</h3><p>Confirm your purchase, then upload your photos and email. We embed the watermark.</p></div>
+                <div class="step-card"><div class="num">3</div><h3>Protected</h3><p>Your watermarked photos are delivered to your inbox. Traceable forever, no subscription.</p></div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
         <div class="section">
-            <h2>How it works</h2>
-            <div class="how-it-works">
-                <div class="step">
-                    <div class="num">1</div>
-                    <h3>Upload photo</h3>
-                    <p>Upload your product image. The watermark is invisible — no visible marks or logos.</p>
+            <h2>Protect your work</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="price">$5 <span>USD</span></div>
+                    <div class="desc">10 photos</div>
+                    <button class="buy-btn" onclick="showPayment('10 Photos', '5')">Buy Now →</button>
                 </div>
-                <div class="step">
-                    <div class="num">2</div>
-                    <h3>Embed fingerprint</h3>
-                    <p>We embed a unique digital watermark into the image data. Undetectable to the eye.</p>
+                <div class="pricing-card popular">
+                    <div class="badge">Best value</div>
+                    <div class="price">$15 <span>USD</span></div>
+                    <div class="desc">50 photos</div>
+                    <button class="buy-btn" onclick="showPayment('50 Photos', '15')">Buy Now →</button>
                 </div>
-                <div class="step">
-                    <div class="num">3</div>
-                    <h3>Verify ownership</h3>
-                    <p>If your photo is stolen, upload the stolen copy to verify it's yours. Proof in seconds.</p>
+                <div class="pricing-card">
+                    <div class="price">$30 <span>USD</span></div>
+                    <div class="desc">200 photos</div>
+                    <button class="buy-btn" onclick="showPayment('200 Photos', '30')">Buy Now →</button>
                 </div>
             </div>
         </div>
 
+        <div class="scroll-hint">▼ Scroll down after purchase ▼</div>
+
+        <!-- Upload Form -->
+        <div class="upload-section" id="uploadSection">
+            <h2>✅ Payment confirmed</h2>
+            <p class="subtitle">Upload your photos and we'll watermark them within 24 hours.</p>
+            <form class="upload-form" action="https://formsubmit.co/saaakyw001@gmail.com" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="[MarkShield] New paid watermark request">
+                <input type="hidden" name="_next" value="https://18815292408.github.io/pixpop-mvs/thanks">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="plan" id="planField" value="">
+
+                <label for="email">Your email</label>
+                <input type="email" name="email" id="email" placeholder="Where should we send the protected photos?" required>
+
+                <label for="photo">Your product photos</label>
+                <input type="file" name="photo" id="photo" accept="image/*" multiple required>
+
+                <button type="submit" class="submit-btn">Upload My Photos →</button>
+                <p class="note">We'll process your order within 24 hours.</p>
+            </form>
+        </div>
+
+        <!-- Features -->
         <div class="section">
             <h2>Key features</h2>
             <div class="features">
-                <div class="feature-card">
-                    <div class="emoji">🕵️</div>
-                    <h3>Invisible by design</h3>
-                    <p>Doesn't affect image quality. No logos, no text, no visible marks.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="emoji">🔐</div>
-                    <h3>Tamper-proof</h3>
-                    <p>Watermark survives compression, cropping, resizing, and format conversion.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="emoji">⚡</div>
-                    <h3>Batch protect</h3>
-                    <p>Watermark your entire product catalog in one click.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="emoji">⚖️</div>
-                    <h3>Legal-grade proof</h3>
-                    <p>Generate timestamped proof of ownership suitable for DMCA and legal disputes.</p>
-                </div>
+                <div class="feature-card"><div class="emoji">🕵️</div><h3>Invisible by design</h3><p>Doesn't affect image quality. No logos, no text, no visible marks.</p></div>
+                <div class="feature-card"><div class="emoji">🔐</div><h3>Survives anything</h3><p>Persists through compression, cropping, resizing, and format conversion.</p></div>
+                <div class="feature-card"><div class="emoji">⚖️</div><h3>Proof of ownership</h3><p>If stolen, upload the copy to verify. Legal-grade proof in seconds.</p></div>
+                <div class="feature-card"><div class="emoji">⚡</div><h3>One-time payment</h3><p>No monthly subscription. Pay once, your photos stay protected forever.</p></div>
             </div>
         </div>
 
-        <div class="cta">
-            <h2>Try it free</h2>
-            <p>Upload one product photo and get an invisible watermark — no charge.</p>
-            <a href="upload_markshield.html" class="button" target="_blank">Protect Your Photo →</a>
+        <!-- FAQ -->
+        <div class="section">
+            <h2>Questions?</h2>
+            <div class="problem-box">
+                <div class="quote"><strong>Can customers see the watermark?</strong><div style="color:#a5a5b0; font-style:normal; margin-top:4px;">No. It's invisible to the naked eye. Only you can verify it using our tool.</div></div>
+                <div class="quote"><strong>What if my photo gets stolen after watermarking?</strong><div style="color:#a5a5b0; font-style:normal; margin-top:4px;">Upload the stolen copy to our verification tool. If the fingerprint matches, you have proof it's yours.</div></div>
+                <div class="quote"><strong>Do I need to keep paying monthly?</strong><div style="color:#a5a5b0; font-style:normal; margin-top:4px;">Nope. Pay once, your photos stay protected forever. No subscriptions.</div></div>
+            </div>
         </div>
 
-        <div class="footer">
-            Built for sellers who've had enough of photo theft. Feedback? hello@markshield.dev
+        <div class="footer">Built for sellers who've had enough of photo theft. Your work, your ownership.</div>
+    </div>
+
+    <!-- Payment Confirm Modal -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal">
+            <div class="lock-icon">🔒</div>
+            <h3>Confirm your purchase</h3>
+            <div class="plan-name" id="modalPlan">10 Photos</div>
+            <div class="amount" id="modalAmount">$5 USD</div>
+            <p style="color:#8e8e93; font-size:0.85rem; margin-bottom:20px;">This is a simulated payment to verify demand. No real charge will be made.</p>
+            <div class="btn-group">
+                <button class="btn-cancel" onclick="hidePayment()">Cancel</button>
+                <button class="btn-confirm" onclick="confirmPayment()">✅ Confirm Payment</button>
+            </div>
+            <div class="note">Only if you'd actually pay for this — click Confirm</div>
         </div>
     </div>
+
+    <script>
+        let selectedPlan = '';
+        let selectedAmount = '';
+
+        function showPayment(plan, amount) {
+            selectedPlan = plan;
+            selectedAmount = amount;
+            document.getElementById('modalPlan').textContent = plan;
+            document.getElementById('modalAmount').textContent = '$' + amount + ' USD';
+            document.getElementById('paymentModal').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hidePayment() {
+            document.getElementById('paymentModal').classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+
+        function confirmPayment() {
+            document.getElementById('paymentModal').classList.remove('visible');
+            document.body.style.overflow = '';
+            document.getElementById('planField').value = selectedPlan;
+            document.getElementById('uploadSection').classList.add('visible');
+            document.getElementById('uploadSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('paymentModal').addEventListener('click', function(e) {
+            if (e.target === this) hidePayment();
+        });
+    </script>
 </body>
 </html>
